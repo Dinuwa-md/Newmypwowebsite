@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - WHITE VIPER</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Login Box */
+        .login-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            backdrop-filter: blur(5px);
+        }
+
+        .login-box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        .login-box h2 {
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #ddd;
+        }
+
+        .msg-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .msg-btn:hover {
+            background: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <img src="https://telegra.ph/file/bb0e48399016c6b533dff-d02eba1ecc5aa112fa.jpg" alt="Hacker Image">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button class="btn" onclick="validateLogin()">Login</button>
+        <a href="https://t.me/YourTelegramUsername?text=Hey_Viper_Send_Me_Username_And_Password" class="msg-btn">Message for Number</a>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "WHITE VIPER" && password === "WHITE VIPER") {
+                alert("Login Successful!");
+                window.location.href = "portfolio.html";
+            } else {
+                alert("Invalid Username or Password");
+            }
+        }
+    </script>
+
+</body>
+</html>
